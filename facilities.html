@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الأمن والسلامة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo" alt="شعار جامعة أم القرى">
+    <h1 class="header-title">إدارة الأمن والسلامة</h1>
+</header>
+
+<nav>
+    <a href="agency1.html" class="menu-item">رجوع ← وكالة الجامعة</a>
+</nav>
+<input type="text" id="searchInput" class="search-bar" placeholder="ابحث عن خدمة...">
+
+<div class="container">
+    <h2>خدمات إدارة الأمن والسلامة</h2>
+
+    <div class="services-list">
+        <ul>
+            <li><a href="https://uqu.edu.sa/security/83991" target="_blank">وحدة التصاريح</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/141157" target="_blank">محضر إثبات حالة</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/141180" target="_blank">نموذج إدخال وإخراج المواد</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/71009?ticket_cat_id=144194" target="_blank">الجرد السنوي لسجلات أعمال البوابة – موظفات الأمن</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/26044?ticket_cat_id=93027" target="_blank">مهمة عمل – مقر الزاهر</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/26056?ticket_cat_id=93024" target="_blank">مرافقة حالة إسعافية – طالبات</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/47531?ticket_cat_id=116705" target="_blank">الجرد الشهري لسجلات أعمال البوابة – موظفات الأمن</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/70995?ticket_cat_id=144187" target="_blank">دخول مرافقات للحالات الصحية</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/17522?ticket_cat_id=80879" target="_blank">الاقتراحات والملاحظات</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/10854?ticket_cat_id=83196" target="_blank">نموذج دخول وخروج أغراض – فترة الدوام</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/26965?ticket_cat_id=94842" target="_blank">إقرار تسليم المفاتيح</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/47055?ticket_cat_id=116509" target="_blank">طلب إصدار تصريح موقف سيارة</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/48637?ticket_cat_id=117342" target="_blank">تصريح المناقشات العلمية – طالبات الدراسات العليا</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/107213?ticket_cat_id=160546" target="_blank">نموذج تسليم مفقودات</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/90245?ticket_cat_id=152734" target="_blank">تصريح دخول وخروج أغراض – طالبات</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/107255?ticket_cat_id=160609" target="_blank">نموذج استلام مفقودات</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/123929?ticket_cat_id=166958" target="_blank">بلاغات السلامة</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/130509?ticket_cat_id=169387" target="_blank">استلام وخروج الأجهزة المصادرة</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/132163?ticket_cat_id=170053" target="_blank">طلب مفتاح لصيانة أجهزة السلامة</a></li>
+            <li><a href="https://uqu.edu.sa/security/App/Forms/Show/141186?ticket_cat_id=173232" target="_blank">دخول وخروج أجهزة الحاسب الآلي – صيانة عمادة التقنية</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 جامعة أم القرى</p>
+</footer>
+<script>
+const searchInput = document.getElementById('searchInput');
+const serviceItems = document.querySelectorAll('.services-list ul li');
+
+searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    serviceItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+</script>
+
+</body>
+</html>

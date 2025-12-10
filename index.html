@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل موظفين جامعة أم القرى</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS الخارجي -->
+</head>
+
+<body class="home-page">
+
+    <!-- ===== هيدر ===== -->
+    <header>
+        <img src="logo.png" class="logo" alt="شعار جامعة أم القرى"> <!-- شعار الجامعة -->
+        <h1 class="header-title">دليل لموظفين جامعة أم القرى</h1>
+    </header>
+
+    <!-- ===== القائمة الجانبية ===== -->
+    <div class="sidebar-icon" id="sidebar-icon">&#9776;</div> <!-- أيقونة القائمة الجانبية -->
+    <div class="sidebar-menu" id="sidebar-menu">
+        <a href="#" id="services">الخدمات الإلكترونية</a>
+        <div class="agency-menu" id="agency-menu"> <!-- قائمة الوكالات -->
+            <a href="agency1.html">وكالة الجامعة</a>
+            <a href="agency2.html">وكالة الجامعة لتنمية الأعمال والشراكة المجتمعية</a>
+            <a href="agency3.html">وكالة الجامعة للشؤون الأكاديمية</a>
+            <a href="agency4.html">وكالة الجامعة للدراسات العليا والبحث العلمي</a>
+        </div>
+    </div>
+
+    <!-- ===== شريط التنقل ===== -->
+    <nav>
+        <a href="S.html" class="menu-item">الموظفين</a>
+        <a href="T.html" class="menu-item">تهيئة الموظفين الجدد</a>
+        <a href="AS.html" class="menu-item">من نحن</a>
+        <a href="contact.html" class="menu-item">تواصل معنا</a>
+    </nav>
+
+    <!-- ===== العبارة الرئيسية ===== -->
+    <div class="hero">
+        <p>قم بالإختيار..</p>
+    </div>
+
+    <!-- ===== كروت الخيارات ===== -->
+    <div class="container home">
+        <div class="card-container">
+            <a href="S.html" class="card">
+                <div class="icon">&#128188;</div>
+                <p>الموظفين</p>
+            </a>
+            <a href="T.html" class="card">
+                <div class="icon">&#128100;</div>
+                <p>تهيئة الموظفين الجدد</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== فوتر ===== -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2025 - جامعة أم القرى</p>
+    </footer>
+
+    <!-- ===== جافاسكربت للقائمة الجانبية ===== -->
+    <script>
+        const sidebarIcon = document.getElementById('sidebar-icon');
+        const sidebarMenu = document.getElementById('sidebar-menu');
+        const services = document.getElementById('services');
+        const agencyMenu = document.getElementById('agency-menu');
+
+        // زر القائمة الجانبية: فتح/إغلاق
+        sidebarIcon.onclick = function() {
+            sidebarMenu.classList.toggle('active');
+            sidebarMenu.style.display = sidebarMenu.style.display === 'block' ? 'none' : 'block';
+        };
+
+        // فتح/إغلاق قائمة الوكالات عند الضغط على "الخدمات الإلكترونية"
+        services.onclick = function () {
+            agencyMenu.style.display = agencyMenu.style.display === 'block' ? 'none' : 'block';
+        };
+    </script>
+
+</body>
+</html>
