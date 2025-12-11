@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الخدمات التعليمية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" class="logo" alt="شعار جامعة أم القرى">
+    <h1 class="header-title">إدارة الخدمات التعليمية</h1>
+</header>
+
+<nav>
+    <a href="agency3.html" class="menu-item">رجوع ← وكالة الجامعة للشؤون الأكاديمية</a>
+</nav>
+
+<div class="container">
+
+<input type="text" id="search" class="search-bar" placeholder="ابحث عن نموذج أو خدمة...">
+
+<div class="services-list">
+    <ul>
+        <li><a href="https://uqu.edu.sa/edu_services/App/Forms/Show/19109?ticket_cat_id=115060" target="_blank">طلب صيانة للمستلزمات والأجهزة التعليمية والمعملية والطبية</a></li>
+        <li><a href="https://uqu.edu.sa/edu_services/App/Forms/Show/12716?ticket_cat_id=115060" target="_blank">طلب نقل مرئي</a></li>
+        <li><a href="https://uqu.edu.sa/edu_services/App/Forms/Show/17486?ticket_cat_id=98995" target="_blank">الاستفسارات والاقتراحات</a></li>
+    </ul>
+</div>
+</div>
+
+<footer>
+    <p>© 2025 جامعة أم القرى</p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('search');
+const serviceItems = document.querySelectorAll('.services-list ul li');
+
+searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    serviceItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+</script>
+
+</body>
+</html>

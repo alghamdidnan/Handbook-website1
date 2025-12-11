@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عمادة التطوير والجودة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" class="logo" alt="شعار جامعة أم القرى">
+    <h1 class="header-title">عمادة التطوير والجودة</h1>
+</header>
+
+<nav>
+    <a href="agency3.html" class="menu-item">رجوع ← وكالة الجامعة للشؤون الأكاديمية</a>
+</nav>
+
+<div class="container">
+
+<input type="text" id="search" class="search-bar" placeholder="ابحث عن نموذج أو خدمة...">
+
+<div class="services-list">
+    <ul>
+        <li><a href="https://uqu.edu.sa/quality/App/Tickets" target="_blank">التذاكر الإلكترونية</a></li>
+        <li><a href="https://uqu.edu.sa/quality/151681" target="_blank">الأدلة والنماذج</a></li>
+    </ul>
+</div>
+</div>
+
+<footer>
+    <p>© 2025 جامعة أم القرى</p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('search');
+const serviceItems = document.querySelectorAll('.services-list ul li');
+
+searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase()
