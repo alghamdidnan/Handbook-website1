@@ -1,14 +1,4 @@
-/* ===== متغيرات الألوان ===== */
-:root {
-    --primary-color: #0b6b73;   /* الأخضر الجديد */
-    --secondary-color: #d4c29d; /* الذهبي الجديد */
-    --nav-color: #085a60;
-    --bg-color: #f8f8f8;
-    --text-color: #333;
-    --white: #ffffff;
-}
-
-/* ===== الخطوط ===== */ 
+/* ===== الخطوط ===== */
 @font-face {
     font-family: "TS-Safaa-Bold";
     src: url("fonts/TS-Safaa-Bold.otf") format("opentype");
@@ -25,17 +15,16 @@ html, body {
 
 body {
     font-family: "TS-Safaa", "Tajawal", sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: #f8f8f8;
     display: flex;
     flex-direction: column; 
 }
 
 /* ===== هيدر ===== */
 header {
-    background-color: var(--white);
+    background-color: #ffffff;
     padding: 15px 25px;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid #d4c29d;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,14 +38,14 @@ header img.logo {
 .header-title {
     margin: 0; 
     font-size: 28px; 
-    color: var(--primary-color); 
+    color: #0b6b73; 
     flex-grow: 1; 
     text-align: center; 
 }
 
 /* ===== شريط التنقل ===== */
 nav {
-    background-color: var(--nav-color);
+    background-color: #084f55;  /* أخضر غامق للشريط */
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -79,9 +68,9 @@ nav a:hover {
 /* ===== عبارة رئيسية ===== */
 .hero {
     max-width: 700px;
-    margin: 10px auto;
+    margin: 10px auto 10px;
     text-align: center;
-    color: var(--primary-color);
+    color: #0b6b73;
     line-height: 1.8;
     font-size: 20px;
 }
@@ -104,14 +93,14 @@ nav a:hover {
 
 .card {
     display: block;
-    background-color: var(--white);
+    background-color: white;
     width: 250px;
     padding: 25px;
     border-radius: 16px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-    border-top: 5px solid var(--secondary-color);
+    border-top: 5px solid #d4c29d;
     text-decoration: none;
 }
 
@@ -121,7 +110,7 @@ nav a:hover {
 }
 
 .card p {
-    color: var(--primary-color);
+    color: #0b6b73;
     font-size: 22px;
     margin: 0;
 }
@@ -130,13 +119,27 @@ nav a:hover {
 .card .icon {
     font-size: 50px;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: #0b6b73;
     opacity: 0.85;
+}
+
+/* ===== فوتر ===== */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    border-top: 3px solid #d4c29d;
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 0;
+    color: #333;
 }
 
 /* ===== زر ===== */
 .button {
-    background-color: var(--secondary-color);
+    background-color: #d4c29d;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -147,21 +150,7 @@ nav a:hover {
 }
 
 .button:hover {
-    background-color: #c1ad86;
-}
-
-/* ===== فوتر ===== */
-footer {
-    background-color: var(--white);
-    text-align: center;
-    padding: 18px;
-    border-top: 3px solid var(--secondary-color);
-    margin-top: auto; 
-}
-
-footer p {
-    margin: 0;
-    color: var(--text-color);
+    background-color: #bfae8f; /* ذهبي أغمق قليلاً */
 }
 
 /* ===== أيقونة القائمة الجانبية ===== */
@@ -180,7 +169,7 @@ footer p {
     position: fixed; 
     left: 80px; 
     top: 60px; 
-    background-color: var(--primary-color); 
+    background-color: #0b6b73; 
     border-radius: 5px; 
     padding: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -197,9 +186,13 @@ footer p {
 /* ===== قائمة الوكالات ===== */
 .agency-menu {
     display: none; 
-    background-color: var(--primary-color); 
+    background-color: #0b6b73; 
     margin-top: 5px; 
     border-radius: 5px; 
+}
+
+.show {
+    display: block; 
 }
 
 /* ===== سيرش بار ===== */
@@ -208,7 +201,7 @@ footer p {
     padding: 12px;
     font-size: 18px;
     margin: 20px 0;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid #d4c29d;
     border-radius: 8px;
     box-sizing: border-box;
     outline: none;
@@ -216,18 +209,17 @@ footer p {
 }
 
 .search-bar:focus {
-    border-color: #c1ad86;
+    border-color: #bfae8f;
 }
 
-/* ===== العناوين ===== */
+/* ===== تنسيق العناوين ===== */
 h2 {
     margin: 40px 0 20px;
     text-align: right;
     font-size: 24px;
-    color: var(--primary-color);
+    color: #0b6b73;
 }
 
-/* ===== اللوائح ===== */
 .regulations-wrapper {
     display: flex;
     justify-content: space-between;
@@ -237,25 +229,146 @@ h2 {
 .internal-regulations, 
 .external-regulations {
     width: 48%;
-    background: var(--white);
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-/* ===== روابط ذهبية ===== */
-.link-gold,
-.services-list a,
-.contact-card a {
-    color: var(--secondary-color) !important;
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-top: 5px solid #d4c29d;
+}
+
+.contact-card h3 {
+    color: #0b6b73;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.sub-nav-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.link-gold, .contact-card a {
+    color: #d4c29d !important;
     font-weight: 600;
     text-decoration: none;
 }
 
-.link-gold:hover,
-.services-list a:hover,
-.contact-card a:hover {
+.link-gold:hover, .contact-card a:hover {
     text-decoration: underline;
 }
 
+.services-list {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-right: 5px solid #d4c29d;
+}
 
+.services-list h3 {
+    color: #0b6b73;
+    margin-bottom: 15px;
+}
+
+.services-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-list li {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.services-list a {
+    color: #d4c29d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.services-list a:hover {
+    text-decoration: underline;
+}
+
+/* تعديل قائمة الخدمات لتكون بعرض الصفحة بالكامل ومبدوءة من اليمين */
+.services-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+}
+
+.services-list a {
+    display: inline-block;
+    color: #d4c29d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.services-list a:hover {
+    text-decoration: underline;
+}
+
+/* ===== سيرش بار الخدمات ===== */
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin: 20px 0;
+    border: 2px solid #d4c29d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: right;
+}
+
+.search-bar:focus {
+    border-color: #bfae8f;
+}
+
+.services-list {
+    width: 100vw;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: right;
+    background: white;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-right: 5px solid #d4c29d;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.services-list a {
+    display: block;
+    text-align: right;
+}
